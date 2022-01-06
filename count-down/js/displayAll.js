@@ -6,8 +6,8 @@ function displayAll(){
     this.number2020 = document.getElementsByClassName("number"); // Các chữ số trong 2020
     this.textTet = document.getElementsByClassName("textTet")[0]; // Không biết gọi thế nào :)
     this.slogan = document.getElementsByClassName("slogan")[0]; // Câu nói hay ho năm canh tý
-    // this.iconSetting = document.getElementsByClassName("icon-setting")[0]; // icon setting
-    // this.setting = document.getElementsByClassName("setting")[0]; // Bảng setting
+    this.iconSetting = document.getElementsByClassName("icon-setting")[0]; // icon setting
+    this.setting = document.getElementsByClassName("setting")[0]; // Bảng setting
 
     // Hàm hiển thị các phần tử với giá trị Top, thời gian bắt đầu, thời gian lặp qua từng phần tử,
     // mảng phần tử, loại vị trí, giá trị, đơn vị đo của giá trị Top
@@ -97,6 +97,13 @@ function displayAll(){
     this.displaySlogan = function(){
         this.display(2000, 0, 2, [this.slogan], "top", -10, "%");
     }
+    // Hiển thị câu slogan tết 2020
+    this.displaySetting = function(){
+        this.display(2000, 0, 2, this.setting, "bottom", 0, "%");
+    }
+    this.displayIconSetting = function(){
+        this.display(2000, 0, 2, this.iconSetting, "bottom", 0, "%");
+    }
 }
 
 
@@ -109,3 +116,4 @@ display.displayTextTet();
 display.displayNumber2020();
 display.displaySlogan();
 display.displaySetting();
+display.displayIconSetting();
